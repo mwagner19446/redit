@@ -17,7 +17,6 @@ describe "a user can sign up" do
     end 
 
     #Expectation
-    save_and_open_page
     within ".user_information" do
       expect(page).to have_content "Noob"
     end

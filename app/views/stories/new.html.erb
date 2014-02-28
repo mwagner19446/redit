@@ -1,0 +1,9 @@
+<h1></h1>
+
+<div class="story_form">
+  <%=form_for  [@user, @story] do |f|%>
+  <%=f.label :url %>
+  <%=f.url_field :url %> 
+  <%=f.submit "Submit" %>
+  <%end%>
+</div>
