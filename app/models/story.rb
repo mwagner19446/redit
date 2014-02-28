@@ -6,7 +6,5 @@ class Story < ActiveRecord::Base
 
   validates :url, presence: true, uniqueness: true
   validates :title, presence: true
-  validates :created_at, presence: true
-  validates :updated_at, presence: true
 
 end

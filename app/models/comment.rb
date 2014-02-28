@@ -6,7 +6,4 @@ class Comment < ActiveRecord::Base
   validates :comments_message, presence: true
   validates :stories_id, presence: true
   validates :users_id, presence: true
-  validates :created_at, presence: true
-  validates :updated_at, presence: true
-
 end

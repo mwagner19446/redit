@@ -7,7 +7,5 @@ class Vote < ActiveRecord::Base
   validates :stories_id, presence: true
   validates :users_id, presence: true
   validates :users_id, uniqueness: { scope: :stories_id } 
-  validates :created_at, presence: true
-  validates :updated_at, presence: true
 
 end

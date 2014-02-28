@@ -7,8 +7,6 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   validates :user_name, presence: true, uniqueness: true
   validates :password_digest, presence: true
-  validates :created_at, presence: true
-  validates :updated_at, presence: true
 
   has_secure_password
 
