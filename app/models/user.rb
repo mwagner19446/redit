@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
   validates :created_at, presence: true
   validates :updated_at, presence: true
 
+  has_secure_password
+
 end
