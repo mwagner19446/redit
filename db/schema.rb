@@ -11,15 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228165337) do
+ActiveRecord::Schema.define(version: 20140228193501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "comments", force: true do |t|
+    t.text     "comment_message"
+    t.integer  "users_id"
+    t.integer  "stories_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stories", force: true do |t|
+    t.text     "url"
+    t.string   "title"
+    t.integer  "users_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
-    t.string "email"
-    t.string "username"
-    t.string "password_digest"
+    t.string   "email"
+    t.string   "user_name"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "votes", force: true do |t|
+    t.integer  "vote_value"
+    t.integer  "users_id"
+    t.integer  "stories_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
